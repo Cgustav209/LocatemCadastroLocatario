@@ -10,8 +10,9 @@
             <!-- ============================================== coluna esquerda =============================================== -->
             
             <Grid RowDefinitions="Auto">
+                <!-- Cabeçario -->
                 <VerticalStackLayout>
-
+                 
                     <Grid>
                         <!-- botao para trocar para locador-->
                         <ImageButton  
@@ -34,7 +35,7 @@
             </Grid>
 
             <Grid>
-
+                 <!-- Corpo da pagina com o formulario -->
                 <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" 
                    Padding="50"     
                    HorizontalOptions="Fill" 
@@ -93,14 +94,16 @@
                         </VerticalStackLayout>
 
                         <VerticalStackLayout>
-                            <!-- Campo da Senha (Sem o placerholder)-->
+                            <!-- Campo da Senha -->
                             <Label Text="Senha" Style="{StaticResource LabelNormal}"/>
 
                             <Grid ColumnDefinitions="*,Auto">
                                 <Border Stroke="Black" StrokeThickness="1" StrokeShape="RoundRectangle 5" Padding="0"  MinimumHeightRequest="44">
+                                    
+                                    <!-- Um grid q une o Entry com a imagem, assim possibilitando colocar numa border-->
                                     <Grid>
                                         <Entry x:Name="SenhaEntry"  IsPassword="True" Style="{StaticResource EstiloEntry}"/>
-                                        <!--(Placeholder="******") Descartado-->
+                                      
                                         <ImageButton Grid.Column="1" Source="eye.png" Background="Transparent" Clicked="OnTogglePassword" WidthRequest="30" HorizontalOptions="End"/>
 
                                     </Grid>
